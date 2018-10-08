@@ -1,0 +1,84 @@
+@import "normalize"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "mixins"
+@import "buttons"
+
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html,
+body
+	font-size: 16px
+	height: 100%
+
+body
+	font-family: $default-font
+	color: $text
+	line-height: 1.32
+	position: relative
+	min-width: 320px
+	overflow-x: auto
+
+a
+	+trs()
+	&:hover
+		text-decoration: none
+	&:focus
+		text-decoration: none
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.container
+	// min-width: 320px
+	// overflow-x: auto
+	margin: 0 auto
+	padding: 0 5px
+
+.photo__item-inner
+	margin: 0 2.5px 5px
+	width: calc(100% / 4 - 5px)
+
+*, *::before, *::after 
+	box-sizing: border-box
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+@import "_sections/**/*.sass"
+@import "media" // Всегда в конце

@@ -1,0 +1,126 @@
+.h1
+  font-family: "Playfair Display", serif
+  font-weight: 400
+  font-size: 26px
+  background-color: #fff
+  display: inline-block
+  margin: 0
+  padding-right: 20px
+  text-transform: uppercase
+  &::before
+    content: ''
+    position: absolute
+    bottom: 7px
+    right: 0
+    left: 0
+    z-index: -1
+    height: 2px
+    background-color: #000
+
+.photo
+  padding-top: 20px
+  margin-bottom: 15px
+
+  &__title
+    margin-bottom: 11px
+    position: relative
+
+  &__head
+    position: relative
+    margin-bottom: 5px
+
+  &__date
+    position: absolute
+    top: 6px
+    left: 6px
+    
+  &__item-inner
+    margin: 0 2.5px 5px
+    width: calc(100% / 4 - 5px)
+
+  &__item
+    margin: 0 -2.5px
+  
+    .date
+      width: 100%
+      height: auto
+      padding: 3px
+      &::after
+        top: 23%
+
+.date
+  font-family: "Noto Serif", serif
+  font-size: 14px
+  width: 80px
+  height: 53px
+  background-color: rgba(#fff,0.7)
+  text-align: center
+  padding: 9px
+  position: relative
+  span
+    font-size: 18px
+    display: block
+  &::after
+    content: ''
+    top: 33%
+    right: 15%
+    position: absolute
+    border: 3px solid transparent
+    border-left: 3px solid #000
+
+.pagination
+  font-size: 13px
+  padding-bottom: 20px
+  &-wrap
+    display: flex
+    align-items: center
+  &__text
+    display: none
+    color: #848484
+    margin-right: 20px
+  &-list
+    display: flex
+  
+.pagination__item
+  &.active
+    a
+      background-color: #e6e6e6
+      font-weight: 700
+
+  &:first-child
+    display: none
+  &:first-child,
+  &:last-child
+    a
+      width: auto
+  a
+    padding: 0 10px
+    color: $text
+    display: block
+    width: 34px
+    height: 34px
+    text-align: center
+    line-height: 34px
+    border-radius: 20px
+    text-decoration: none
+
+    &:hover
+      background-color: #ccc
+
+.photo
+  &__desc
+    display: none
+    font-size: 13px
+    margin-bottom: 18px
+    p
+      font-weight: 700
+      margin: 0
+      margin-bottom: 2px
+    span
+      color: #acacac
+      a
+        color: #acacac
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline

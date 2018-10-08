@@ -1,0 +1,30 @@
+// transition
+=trs($property: all, $duration: 0.3s, $timing: ease)
+	transition: $property $duration $timing
+
+
+// overlay
+=overlay
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+
+// vcenter
+=vcenter
+	position: absolute
+	top: 50%
+	left: 50%
+	+transform(translate(-50%,-50%))
+
+=placeholder-color($color)
+	&:-moz-placeholder,
+	&::-moz-placeholder
+		color: $color
+		opacity: 1
+		font-size: 12px
+	&::-webkit-input-placeholder
+		color: $color
+		font-size: 12px
